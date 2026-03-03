@@ -806,6 +806,7 @@ footer {
         bottom: 16px;
     }
     .chat-widget-btn { bottom: 16px; right: 16px; width: 54px; height: 54px; font-size: 22px; }
+    .chat-header p { display: none; }
 }
 
 @media (max-width: 768px) {

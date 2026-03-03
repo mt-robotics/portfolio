@@ -190,7 +190,7 @@
         <div class="service-card">
             <div class="service-icon">🤖</div>
             <h3>Custom AI Chatbot</h3>
-            <p>A smart chatbot trained on your business content — answers customer questions accurately, in your language, 24/7. Embeddable on any website. See the live demo below.</p>
+            <p>A smart chatbot trained on your business content — answers customer questions accurately, in your language, 24/7. Embeddable on any website.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">🔍</div>
@@ -392,7 +392,7 @@
 
 <div id="chatPanel" class="chat-panel">
     <div class="chat-header">
-        <h3>Smart Chatbot — Live Demo</h3>
+        <h3>Smart Chatbot</h3>
         <p>Ask about Monireach &middot; Your business can have one like this</p>
         <button class="chat-close-btn" onclick="toggleChat()">✕</button>
     </div>
@@ -421,8 +421,13 @@
 
     function toggleChat() {
         chatOpen = !chatOpen;
-        document.getElementById('chatPanel').classList.toggle('open', chatOpen);
+        const panel = document.getElementById('chatPanel');
+        panel.classList.toggle('open', chatOpen);
         document.getElementById('chatWidgetBtn').classList.toggle('hidden', chatOpen);
+        if (!chatOpen) {
+            panel.style.bottom = '';
+            panel.style.maxHeight = '';
+        }
         if (chatOpen && !welcomed) {
             addMessage('Hi! I\'m Monireach\'s AI assistant. Ask me about his projects, skills, or background.', 'bot');
             welcomed = true;
@@ -503,6 +508,28 @@
         this.style.height = '38px';
         if (this.scrollHeight > 38) this.style.height = this.scrollHeight + 'px';
     });
+
+    // Push chat panel above keyboard on mobile
+    function adjustChatForKeyboard() {
+        if (!chatOpen) return;
+        const panel = document.getElementById('chatPanel');
+        const vv = window.visualViewport;
+        if (!vv) return;
+        const extraBottom = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+        const baseBottom = window.innerWidth <= 480 ? 16 : 24;
+        if (extraBottom > 0) {
+            panel.style.bottom = (baseBottom + extraBottom) + 'px';
+            panel.style.maxHeight = (vv.height - baseBottom - 16) + 'px';
+        } else {
+            panel.style.bottom = '';
+            panel.style.maxHeight = '';
+        }
+    }
+
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', adjustChatForKeyboard);
+        window.visualViewport.addEventListener('scroll', adjustChatForKeyboard);
+    }
 </script>
 </body>
 </html>
