@@ -69,6 +69,50 @@ nav {
 
 .nav-links a:hover { color: var(--text); }
 
+.nav-hamburger {
+    display: none;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.nav-hamburger:hover { background: var(--surface-hover); }
+
+@media (max-width: 768px) {
+    .nav-hamburger { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(7, 7, 15, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        padding: 0.5rem 0;
+    }
+
+    .nav-links.open { display: flex; }
+
+    .nav-links li { width: 100%; }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+}
+
 /* ============================================================
    SECTIONS
    ============================================================ */
@@ -525,9 +569,15 @@ footer {
     box-shadow: 0 6px 32px rgba(124, 111, 247, 0.45), inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
+.chat-widget-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
 .chat-panel {
     position: fixed;
-    bottom: 96px;
+    bottom: 24px;
     right: 24px;
     width: 370px;
     height: 520px;
@@ -753,7 +803,7 @@ footer {
         width: calc(100vw - 20px);
         height: 75vh;
         right: 10px;
-        bottom: 86px;
+        bottom: 16px;
     }
     .chat-widget-btn { bottom: 16px; right: 16px; width: 54px; height: 54px; font-size: 22px; }
 }

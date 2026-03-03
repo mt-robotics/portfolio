@@ -14,7 +14,7 @@
      ============================================================ -->
 <nav>
     <span class="nav-brand">Monireach Tang</span>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#services">Services</a></li>
@@ -22,6 +22,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">☰</button>
 </nav>
 
 <!-- ============================================================
@@ -421,7 +422,7 @@
     function toggleChat() {
         chatOpen = !chatOpen;
         document.getElementById('chatPanel').classList.toggle('open', chatOpen);
-        document.getElementById('chatBtnIcon').textContent = chatOpen ? '✕' : '💬';
+        document.getElementById('chatWidgetBtn').classList.toggle('hidden', chatOpen);
         if (chatOpen && !welcomed) {
             addMessage('Hi! I\'m Monireach\'s AI assistant. Ask me about his projects, skills, or background.', 'bot');
             welcomed = true;

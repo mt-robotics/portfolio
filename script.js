@@ -19,3 +19,19 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(s => observer.observe(s));
+
+// Mobile nav hamburger
+const hamburger = document.getElementById('navHamburger');
+const navLinksList = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    const isOpen = navLinksList.classList.toggle('open');
+    hamburger.textContent = isOpen ? '✕' : '☰';
+});
+
+navLinksList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinksList.classList.remove('open');
+        hamburger.textContent = '☰';
+    });
+});
