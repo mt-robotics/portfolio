@@ -392,7 +392,39 @@
 
     <!-- ============================================================
      CHATBOT WIDGET
+     Dark glassmorphism theme — matches portfolio's purple-blue palette.
+     These CSS custom properties are read by the widget's Shadow DOM.
+     When the Admin Console exists, it will generate this snippet per tenant.
      ============================================================ -->
+    <style>
+        smart-chatbot {
+            --chatbot-btn-bg:            rgba(124, 111, 247, 0.3);
+            --chatbot-btn-border:        rgba(124, 111, 247, 0.5);
+            --chatbot-btn-hover-bg:      rgba(124, 111, 247, 0.45);
+
+            --chatbot-panel-bg:          rgba(20, 18, 40, 0.85);
+            --chatbot-panel-border:      rgba(124, 111, 247, 0.3);
+
+            --chatbot-header-bg:         rgba(124, 111, 247, 0.35);
+
+            --chatbot-messages-bg:       rgba(0, 0, 0, 0.1);
+
+            --chatbot-bot-msg-bg:        rgba(255, 255, 255, 0.08);
+            --chatbot-bot-msg-border:    rgba(255, 255, 255, 0.12);
+            --chatbot-bot-msg-color:     #e8e8f0;
+
+            --chatbot-input-bg:          rgba(255, 255, 255, 0.06);
+            --chatbot-input-color:       #e8e8f0;
+            --chatbot-input-placeholder: rgba(200, 200, 220, 0.4);
+
+            --chatbot-thinking-bg:       rgba(255, 255, 255, 0.05);
+            --chatbot-thinking-border:   rgba(255, 255, 255, 0.15);
+            --chatbot-thinking-color:    rgba(255, 255, 255, 0.5);
+
+            --chatbot-typing-color:      rgba(255, 255, 255, 0.5);
+            --chatbot-typing-dot-bg:     rgba(124, 111, 247, 0.7);
+        }
+    </style>
     <script src="https://monireach88-smart-chatbot-api.hf.space/config.js"></script>
     <smart-chatbot></smart-chatbot>
     <script src="https://monireach88-smart-chatbot-api.hf.space/chatbot-widget.js"></script>
