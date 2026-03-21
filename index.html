@@ -139,20 +139,24 @@
                 </div>
             </div>
             <p class="project-desc">
-                Production LLM microservice with multi-turn conversation history, system prompt
-                configuration, and a glassmorphism floating widget embeddable in any website.
-                Powered by Groq (Qwen3-32b) — natively multilingual. Deployed on HuggingFace
-                Spaces via GitHub Actions CI/CD. RAG pipeline in active development.
+                Production LLM microservice with multi-tenant SaaS architecture (API key auth,
+                tenant-scoped data isolation), multi-turn conversation history, and RAG-based
+                domain knowledge layer (ChromaDB). Powered by Groq (Qwen3-32b) — natively
+                multilingual. Shipped as a <code>&lt;smart-chatbot&gt;</code> web component
+                (Preact + Shadow DOM) with CSS custom properties theming, deployed on HuggingFace
+                Spaces via GitHub Actions CI/CD.
             </p>
             <div class="tech-tags">
                 <span class="tag">FastAPI</span>
                 <span class="tag">Groq API</span>
                 <span class="tag">Qwen3-32b</span>
+                <span class="tag">ChromaDB</span>
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">SQLite</span>
                 <span class="tag">Docker</span>
                 <span class="tag">GitHub Actions</span>
                 <span class="tag">HuggingFace Spaces</span>
+                <span class="tag">Preact</span>
                 <span class="tag">scikit-learn</span>
                 <span class="tag">spaCy</span>
             </div>
@@ -192,19 +196,31 @@
         <h2 class="section-title">Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🤖</div>
+                <div class="service-icon">
+                    <span class="service-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c6ff7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </span>
+                </div>
                 <h3>Custom AI Chatbot</h3>
                 <p>A smart chatbot trained on your business content — answers customer questions accurately, in your
                     language, 24/7. Embeddable on any website.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔍</div>
+                <div class="service-icon">
+                    <span class="service-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c6ff7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </span>
+                </div>
                 <h3>Semantic Search</h3>
                 <p>Replace keyword search with AI-powered search that understands meaning. Proven impact: 132% accuracy
                     improvement on a 6,000-user production platform.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🌐</div>
+                <div class="service-icon">
+                    <span class="service-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c6ff7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </span>
+                </div>
                 <h3>Khmer-English AI</h3>
                 <p>NLP pipelines built for Southeast Asia — Khmer text understanding, bilingual voice input, and
                     translation. Built and deployed in production, not theory.</p>
@@ -232,7 +248,7 @@
             </div>
             <p class="project-desc" style="margin-bottom: 0.5rem;">
                 <strong style="color: var(--text);">AI Engineer</strong>
-                <span style="color: var(--text-muted); font-size: 0.85rem;"> · Aug 2025 – Present</span>
+                <span style="color: var(--text-muted); font-size: 0.85rem;"> · Aug 2025 – Present · Volunteer</span>
             </p>
             <p class="project-desc">
                 Built AI-powered semantic search serving 6,000+ Cambodian teachers. Designed multi-cloud
@@ -356,28 +372,36 @@
         </p>
         <div class="contact-row">
             <a href="https://www.linkedin.com/in/monireach-tang/" target="_blank" class="contact-card">
-                <span class="icon">💼</span>
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </span>
                 <div>
                     <span class="label">LinkedIn</span>
                     <span class="value">monireach-tang</span>
                 </div>
             </a>
             <a href="mailto:monireach.tang@gmail.com" class="contact-card">
-                <span class="icon">✉️</span>
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
                 <div>
                     <span class="label">Email</span>
                     <span class="value">monireach.tang@gmail.com</span>
                 </div>
             </a>
             <a href="https://t.me/monireachtang" target="_blank" class="contact-card">
-                <span class="icon">✈️</span>
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </span>
                 <div>
                     <span class="label">Telegram</span>
                     <span class="value">@monireachtang</span>
                 </div>
             </a>
             <a href="https://github.com/mt-robotics" target="_blank" class="contact-card">
-                <span class="icon">🐙</span>
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </span>
                 <div>
                     <span class="label">GitHub</span>
                     <span class="value">mt-robotics</span>
@@ -398,31 +422,31 @@
      ============================================================ -->
     <style>
         smart-chatbot {
-            --chatbot-btn-bg:            rgba(124, 111, 247, 0.3);
-            --chatbot-btn-border:        rgba(124, 111, 247, 0.5);
-            --chatbot-btn-hover-bg:      rgba(124, 111, 247, 0.45);
+            --chatbot-btn-bg: rgba(124, 111, 247, 0.3);
+            --chatbot-btn-border: rgba(124, 111, 247, 0.5);
+            --chatbot-btn-hover-bg: rgba(124, 111, 247, 0.45);
 
-            --chatbot-panel-bg:          rgba(20, 18, 40, 0.85);
-            --chatbot-panel-border:      rgba(124, 111, 247, 0.3);
+            --chatbot-panel-bg: rgba(20, 18, 40, 0.85);
+            --chatbot-panel-border: rgba(124, 111, 247, 0.3);
 
-            --chatbot-header-bg:         rgba(124, 111, 247, 0.35);
+            --chatbot-header-bg: rgba(124, 111, 247, 0.35);
 
-            --chatbot-messages-bg:       rgba(0, 0, 0, 0.1);
+            --chatbot-messages-bg: rgba(0, 0, 0, 0.1);
 
-            --chatbot-bot-msg-bg:        rgba(255, 255, 255, 0.08);
-            --chatbot-bot-msg-border:    rgba(255, 255, 255, 0.12);
-            --chatbot-bot-msg-color:     #e8e8f0;
+            --chatbot-bot-msg-bg: rgba(255, 255, 255, 0.08);
+            --chatbot-bot-msg-border: rgba(255, 255, 255, 0.12);
+            --chatbot-bot-msg-color: #e8e8f0;
 
-            --chatbot-input-bg:          rgba(255, 255, 255, 0.06);
-            --chatbot-input-color:       #e8e8f0;
+            --chatbot-input-bg: rgba(255, 255, 255, 0.06);
+            --chatbot-input-color: #e8e8f0;
             --chatbot-input-placeholder: rgba(200, 200, 220, 0.4);
 
-            --chatbot-thinking-bg:       rgba(255, 255, 255, 0.05);
-            --chatbot-thinking-border:   rgba(255, 255, 255, 0.15);
-            --chatbot-thinking-color:    rgba(255, 255, 255, 0.5);
+            --chatbot-thinking-bg: rgba(255, 255, 255, 0.05);
+            --chatbot-thinking-border: rgba(255, 255, 255, 0.15);
+            --chatbot-thinking-color: rgba(255, 255, 255, 0.5);
 
-            --chatbot-typing-color:      rgba(255, 255, 255, 0.5);
-            --chatbot-typing-dot-bg:     rgba(124, 111, 247, 0.7);
+            --chatbot-typing-color: rgba(255, 255, 255, 0.5);
+            --chatbot-typing-dot-bg: rgba(124, 111, 247, 0.7);
         }
     </style>
     <script src="https://monireach88-smart-chatbot-api.hf.space/config.js"></script>

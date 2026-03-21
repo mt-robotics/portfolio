@@ -447,8 +447,18 @@ h2.section-title {
 }
 
 .service-icon {
-    font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+.service-icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(124, 111, 247, 0.12);
+    border: 1px solid rgba(124, 111, 247, 0.28);
 }
 
 .service-card h3 {
