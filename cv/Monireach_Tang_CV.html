@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
         /* Import Google Fonts */
         @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
-        
+
         /* Reset CSS */
         * {
             margin: 0;
@@ -59,7 +60,12 @@
             margin-bottom: 30px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Montserrat', Arial, sans-serif;
         }
 
@@ -110,23 +116,28 @@
             position: absolute;
             left: -15px;
         }
+
         .skill-bar {
             width: 100%;
             height: 6.5px;
             border-radius: 5px;
             margin-bottom: 15px;
         }
+
         .left-column .skill-bar {
             background-color: #6c7582;
         }
+
         .right-column .skill-bar {
             background-color: #e5e5e5;
         }
+
         .skill-level {
             height: 100%;
             background-color: #a28847;
             border-radius: 5px;
         }
+
         .left-column h3 {
             color: #a28847;
             border-bottom: 1.2px solid #6c7582;
@@ -137,7 +148,13 @@
             color: #6c7582;
         }
 
-        .contact-info p, .contact-info strong {
+        .contact-info p {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info p,
+        .contact-info strong {
             color: #6c7582;
         }
 
@@ -147,7 +164,7 @@
             text-decoration-thickness: 1px;
             text-underline-offset: 2px;
         }
-        
+
         a:hover {
             color: #fff;
             font-weight: bold;
@@ -160,6 +177,7 @@
             flex-direction: column;
             gap: 14px;
         }
+
         .skill-cat-label {
             font-size: 10pt;
             font-weight: 700;
@@ -169,51 +187,102 @@
             display: block;
             margin-bottom: 7px;
         }
+
         .skill-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
         }
+
         .skill-badge {
             font-size: 9pt;
-            background: #f0ecf8;
-            color: #34495e;
+            background: transparent;
+            color: #2c3a4b;
             padding: 3px 11px;
             border-radius: 12px;
-            border: 1px solid #d0cce0;
+            border: 1px solid #a28847;
         }
+
         .right-column h3 {
             border-bottom: 1.2px solid #6c7582;
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
 
+        @page {
+            margin: 0;
+        }
+
         @media print {
+
+            html,
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
             body {
                 padding: 0;
                 margin: 0;
+                max-width: 100%;
             }
+
+            .resume-container {
+                gap: 0;
+            }
+
+            /* Chrome repeats position:fixed elements on every printed page.
+               This pseudo-element paints the sidebar background for the full
+               page height on every page, including empty space on the last page. */
             .left-column {
-                padding: 35px;  /* Safe margin all around: 35px (~0.5 inch) */
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 35px;
+                background: transparent;
+                position: relative;
+                flex: 0 0 33%;
             }
+
+            .left-column::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 33%;
+                height: 100%;
+                background-color: #2c3a4b;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                z-index: -1;
+            }
+
             .right-column {
-                padding: 35px;  /* Safe margin all around: 35px (~0.5 inch) */
-                background-color: #fff;  /* Ensure white background */
-                min-height: 100vh;  /* Fill at least viewport height */
+                flex: 1;
+                padding: 35px;
+                background: white;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="resume-container">
         <div class="left-column">
             <img src="https://monireach.com/images/Monireach_profile_picture.jpg"
-                 onerror="this.onerror=null;this.src='../images/Monireach_profile_picture.jpg'"
-                 alt="Profile Photo" class="profile-image">
-            
+                onerror="this.onerror=null;this.src='../images/Monireach_profile_picture.jpg'" alt="Profile Photo"
+                class="profile-image">
+
             <section class="section">
                 <h3>ABOUT ME</h3>
-                <p>AI Engineer with proven ability to independently build production systems from requirements to deployment using Agile methodology. Architected semantic search solution serving 6,000+ users with 132% accuracy improvement through intelligent system integration, microservices architecture, and Docker orchestration. Built production chatbot and fraud detection systems using Python and FastAPI. Specialize in LLM integration, bot development, and automation workflows with strong foundation in modular architecture, AI-assisted development practices, and full development lifecycle management. Currently advancing expertise through graduate research in Computer Vision and Edge AI, recognized with Best Paper Award at ASIP 2025. Multilingual (Khmer, English, Chinese) with deep understanding of AI applications in Southeast Asian contexts.</p>
+                <p>AI Engineer with proven ability to independently build production systems from requirements to
+                    deployment using Agile methodology. Architected semantic search solution serving 6,000+ users with
+                    132% accuracy improvement through intelligent system integration, microservices architecture, and
+                    Docker orchestration. Built production chatbot and fraud detection systems using Python and FastAPI.
+                    Specialize in LLM integration, bot development, and automation workflows with strong foundation in
+                    modular architecture, AI-assisted development practices, and full development lifecycle management.
+                    Currently advancing expertise through graduate research in Computer Vision and Edge AI, recognized
+                    with Best Paper Award at ASIP 2025. Multilingual (Khmer, English, Chinese) with deep understanding
+                    of AI applications in Southeast Asian contexts.</p>
             </section>
 
             <section class="section">
@@ -227,15 +296,21 @@
                 <h3>LANGUAGES</h3>
                 <div class="skill">
                     <p>Khmer</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 100%"></div></div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <p>English</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%"></div>
+                    </div>
                 </div>
                 <div class="skill">
                     <p>Chinese</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%"></div>
+                    </div>
                 </div>
             </section>
 
@@ -266,9 +341,33 @@
                 <h1>Monireach Tang</h1>
                 <h4 class="job-title">AI Engineer</h4>
                 <div class="contact-info">
-                    <p>📍 Phnom Penh, 120911, Cambodia</p>
-                    <p>📞 +85570489488</p>
-                    <p>📧 monireach.tang@gmail.com</p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                            stroke="#a28847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align:middle;margin-right:6px;flex-shrink:0">
+                            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Phnom Penh, 120911, Cambodia
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                            stroke="#a28847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align:middle;margin-right:6px;flex-shrink:0">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6.29 6.29l1.1-1.1a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +85570489488
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                            stroke="#a28847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="vertical-align:middle;margin-right:6px;flex-shrink:0">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        monireach.tang@gmail.com
+                    </p>
                 </div>
             </section>
 
@@ -279,11 +378,16 @@
                     <p class="job-title">Master's Degree, Artificial Intelligence</p>
                     <p class="date">Oct 2024 - Dec 2027</p>
                     <ul>
-                        <li><strong>Research Topic:</strong> "Contactless AI-Powered Abnormal Movement Detection for Elderly Safety Assurance"</li>
-                        <li>Developing non-invasive AI system leveraging Computer Vision, Edge AI, and privacy-by-design principles for real-time anomaly detection</li>
-                        <li>Processing and annotating sensor data, performing feature engineering, and optimizing hybrid model (CNN-LSTM-Transformer)</li>
-                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference (Privacy Governance in AI-Powered Elderly Monitoring)</li>
-                        <li><strong>Key Technologies:</strong> Python, PyTorch, FastAPI, Computer Vision, Anomaly Detection, Edge Computing</li>
+                        <li><strong>Research Topic:</strong> "Contactless AI-Powered Abnormal Movement Detection for
+                            Elderly Safety Assurance"</li>
+                        <li>Developing non-invasive AI system leveraging Computer Vision, Edge AI, and privacy-by-design
+                            principles for real-time anomaly detection</li>
+                        <li>Processing and annotating sensor data, performing feature engineering, and optimizing hybrid
+                            model (CNN-LSTM-Transformer)</li>
+                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference (Privacy Governance in AI-Powered
+                            Elderly Monitoring)</li>
+                        <li><strong>Key Technologies:</strong> Python, PyTorch, FastAPI, Computer Vision, Anomaly
+                            Detection, Edge Computing</li>
                     </ul>
                 </div>
             </section>
@@ -293,13 +397,34 @@
                 <div class="experience-item">
                     <h4>Smart Customer Service Chatbot</h4>
                     <p class="job-title">LLM-Powered Chatbot Microservice</p>
-                    <p class="date">Live | <a href="https://monireach.com" target="_blank" style="color: #a28847;">monireach.com</a></p>
+                    <p class="date">Live | <a href="https://monireach.com" target="_blank"
+                            style="color: #a28847;">monireach.com</a> | <a
+                            href="https://huggingface.co/spaces/monireach88/smart-chatbot-api" target="_blank"
+                            style="color: #a28847;">HuggingFace Spaces</a></p>
                     <ul>
-                        <li>Architecting a configurable, natively multilingual chatbot microservice with two layers: Instructions layer (dynamic system prompt for tone and business rules) and RAG-based Domain Knowledge layer (ChromaDB vector store with CRUD API) — targeting SaaS deployment for SMEs</li>
-                        <li>Integrated Groq LLM (Qwen3-32b open-source) with stateful multi-turn conversation history, implemented <code>&lt;think&gt;</code> block parsing to cleanly separate model reasoning traces from user-facing responses, and designed SSE streaming pipeline for real-time typewriter UX</li>
-                        <li>Built production-grade infrastructure: FastAPI backend, Docker multi-environment orchestration (dev/staging/prod), PostgreSQL session management, Nginx reverse proxy, and comprehensive pytest test suite following TDD methodology</li>
-                        <li>Designing configurable RAG pipeline (semantic chunking → embedding generation → ChromaDB top-k retrieval → prompt injection) enabling domain-specific responses per client without model fine-tuning or redeployment</li>
-                        <li>Retained hybrid NLP pipeline (TF-IDF + Naive Bayes intent classification, entity extraction) as deterministic routing layer before LLM invocation — combining classical ML precision with LLM generative capability for production reliability</li>
+                        <li>Architecting a configurable, natively multilingual chatbot microservice with two layers:
+                            Instructions layer (dynamic system prompt for tone and business rules) and RAG-based Domain
+                            Knowledge layer (ChromaDB vector store with CRUD API) — targeting SaaS deployment for SMEs
+                        </li>
+                        <li>Integrated Groq LLM (Qwen3-32b open-source) with stateful multi-turn conversation history,
+                            implemented <code>&lt;think&gt;</code> block parsing to cleanly separate model reasoning
+                            traces from user-facing responses, and designed SSE streaming pipeline for real-time
+                            typewriter UX</li>
+                        <li>Built production-grade infrastructure: FastAPI backend, Docker multi-environment
+                            orchestration (dev/staging/prod), PostgreSQL session management, Nginx reverse proxy, and
+                            comprehensive pytest test suite following TDD methodology</li>
+                        <li>Implemented multi-tenant SaaS architecture: API key generation utility, FastAPI middleware
+                            for tenant authentication, and tenant-scoped data isolation across all endpoints — enabling
+                            independent chatbot instances per business client</li>
+                        <li>Shipped <code>&lt;smart-chatbot&gt;</code> web component (Preact + Shadow DOM) with CSS
+                            custom properties theming; deployed to HuggingFace Spaces and embedded live in portfolio
+                            via cross-origin web component</li>
+                        <li>Designing configurable RAG pipeline (semantic chunking → embedding generation → ChromaDB
+                            top-k retrieval → prompt injection) enabling domain-specific responses per client without
+                            model fine-tuning or redeployment</li>
+                        <li>Retained hybrid NLP pipeline (TF-IDF + Naive Bayes intent classification, entity extraction)
+                            as deterministic routing layer before LLM invocation — combining classical ML precision with
+                            LLM generative capability for production reliability</li>
                     </ul>
                 </div>
                 <br>
@@ -307,12 +432,18 @@
                 <div class="experience-item">
                     <h4>Fraud Detection System</h4>
                     <p class="job-title">Production ML System with REST API</p>
-                    <p class="date">Production-Ready | <a href="https://github.com/mt-robotics/fraud-detection-with-machine-learning" target="_blank" style="color: #a28847;">GitHub</a></p>
+                    <p class="date">Production-Ready | <a
+                            href="https://github.com/mt-robotics/fraud-detection-with-machine-learning" target="_blank"
+                            style="color: #a28847;">GitHub</a></p>
                     <ul>
-                        <li>Built end-to-end fraud detection system handling full ML lifecycle from data preprocessing to production API deployment</li>
-                        <li>Achieved 96% precision and 91% F1 score through custom threshold optimization and business cost-aware metrics</li>
-                        <li>Designed production-grade REST API with FastAPI featuring health checks, error handling, SHAP-based model explanations, and real-time predictions</li>
-                        <li>Containerized with Docker and orchestrated deployment pipeline with environment-specific configurations (dev/staging/production)</li>
+                        <li>Built end-to-end fraud detection system handling full ML lifecycle from data preprocessing
+                            to production API deployment</li>
+                        <li>Achieved 96% precision and 91% F1 score through custom threshold optimization and business
+                            cost-aware metrics</li>
+                        <li>Designed production-grade REST API with FastAPI featuring health checks, error handling,
+                            SHAP-based model explanations, and real-time predictions</li>
+                        <li>Containerized with Docker and orchestrated deployment pipeline with environment-specific
+                            configurations (dev/staging/production)</li>
                     </ul>
                 </div>
             </section>
@@ -322,13 +453,28 @@
                 <div class="experience-item">
                     <h4>R4C (Tuktuk Charity)</h4>
                     <p class="job-title">AI Engineer</p>
-                    <p class="date">Aug 2025 - Present | <a href="https://rermork.org/" target="_blank" style="color: #a28847;">Production</a> | <a href="https://rermork-staging.5m02gkw8xj-wl6nevv90652.p.temp-site.link/" target="_blank" style="color: #a28847;">Staging (with AI Chatbot)</a></p>
+                    <p class="date">Aug 2025 - Present | <a href="https://rermork.org/" target="_blank"
+                            style="color: #a28847;">Production</a> | <a
+                            href="https://rermork-staging.5m02gkw8xj-wl6nevv90652.p.temp-site.link/" target="_blank"
+                            style="color: #a28847;">Staging (with AI Chatbot)</a></p>
                     <ul>
-                        <li>Architected AI-powered educational platform serving 6,000+ Cambodian teachers, improving resource discovery accuracy from 25% to 58% (132% improvement) through hybrid search combining semantic embeddings and keyword matching with &lt;2-second response time</li>
-                        <li>Designed multi-cloud AI architecture integrating OpenAI and Google Cloud services: GPT-4/Gemini for chat and translation, text-embedding-3-large for semantic search, Google Cloud Speech-to-Text for voice input, and Pinecone vector database for 1,400+ educational resources</li>
-                        <li>Built microservices ecosystem using FastAPI and Docker: Khmer tokenization service (khmernltk) for NLP word segmentation, voice transcription service (FFmpeg + Google Cloud STT) for audio-to-text conversion, enabling voice-powered search interface</li>
-                        <li>Implemented bilingual embeddings system (Khmer-English) with intelligent caching and cost optimization (Gemini 2.5 Flash-Lite), reducing translation costs by 90% while maintaining search accuracy for both languages</li>
-                        <li>Developed RAG-based conversational chatbot with custom context filtering, dynamic URL mapping, and environment-aware responses, deployed on WordPress with AI Engine Pro integration</li>
+                        <li>Architected AI-powered educational platform serving 6,000+ Cambodian teachers, improving
+                            resource discovery accuracy from 25% to 58% (132% improvement) through hybrid search
+                            combining semantic embeddings and keyword matching with &lt;2-second response time</li>
+                        <li>Designed multi-cloud AI architecture integrating Google Cloud services: OpenAI for semantic
+                            search, Gemini for
+                            chat and translation, Google Speech-to-Text for voice input, and Pinecone for 1,400+
+                            educational
+                            resources</li>
+                        <li>Built microservices ecosystem using FastAPI and Docker: Khmer tokenization service
+                            (khmernltk) for NLP word segmentation, voice transcription service (FFmpeg + Google Cloud
+                            STT) for audio-to-text conversion, enabling voice-powered search interface</li>
+                        <li>Implemented bilingual embeddings system (Khmer-English) with intelligent caching and cost
+                            optimization (Gemini 2.5 Flash-Lite), reducing translation costs by 90% while maintaining
+                            search accuracy for both languages</li>
+                        <li>Developed RAG-based conversational chatbot with custom context filtering, dynamic URL
+                            mapping, and environment-aware responses, deployed on WordPress with AI Engine Pro
+                            integration</li>
                     </ul>
                 </div>
                 <br>
@@ -338,9 +484,12 @@
                     <p class="job-title">Chatbot Specialist</p>
                     <p class="date">Jun 2025 - Feb 2026</p>
                     <ul>
-                        <li>Design and deploy automated chat solutions using NLP tools, creating conversation scripts and FAQs in Khmer language</li>
-                        <li>Monitor chatbot performance metrics, analyze user interactions, and optimize chat functionality for customer satisfaction</li>
-                        <li>Provide Mandarin language support for chat automation and implement workflow process improvements</li>
+                        <li>Design and deploy automated chat solutions using NLP tools, creating conversation scripts
+                            and FAQs in Khmer language</li>
+                        <li>Monitor chatbot performance metrics, analyze user interactions, and optimize chat
+                            functionality for customer satisfaction</li>
+                        <li>Provide Mandarin language support for chat automation and implement workflow process
+                            improvements</li>
                     </ul>
                 </div>
                 <br>
@@ -350,9 +499,10 @@
                     <p class="job-title">DevOps & Project Coordinator</p>
                     <p class="date">Dec 2023 - Jun 2024</p>
                     <ul>
-                        <li>Set up and managed deployment servers using MySQL, PHP, Node.js, and NGINX, including domains, DNS settings, and SSL certificates for PHP-based projects</li>
-                        <li>Monitored system performance using Tencent Cloud tools while analyzing requirements and coordinating task assignments through Zentao</li>
-                        <li>Implemented Docker with NGINX proxy for efficient multi-project management, streamlining deployment processes and successfully managing multiple project launches</li>
+                        <li>Managed deployment infrastructure including MySQL, PHP, Node.js, and NGINX servers, handling
+                            domains, DNS, SSL certificates, and system monitoring via Tencent Cloud tools</li>
+                        <li>Coordinated project requirements through Zentao and implemented Docker with NGINX proxy for
+                            streamlined multi-project deployment and management</li>
                     </ul>
                 </div>
                 <br>
@@ -362,8 +512,10 @@
                     <p class="job-title">Flutter Dev & DevOps</p>
                     <p class="date">Dec 2020 - Dec 2023</p>
                     <ul>
-                        <li>Collaborated with Java backend developers for seamless integration and configured servers on multiple cloud platforms</li>
-                        <li>Built APK files for Android and developed PWAs for iOS, managing app versioning and deployment processes using Git and GitLab, delivering multiple updates on schedule with enhanced workflows</li>
+                        <li>Collaborated with Java backend developers for seamless integration and configured servers
+                            across multiple cloud platforms</li>
+                        <li>Built Android APKs and iOS PWAs, managing versioning and deployment via Git/GitLab to
+                            deliver scheduled updates with improved workflows</li>
                     </ul>
                 </div>
             </section>
@@ -427,7 +579,12 @@
                     </div>
                 </div>
             </section>
+            <section>
+
+            </section>
         </div>
     </div>
+
 </body>
+
 </html>
