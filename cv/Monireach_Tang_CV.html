@@ -274,15 +274,7 @@
 
             <section class="section">
                 <h3>ABOUT ME</h3>
-                <p>AI Engineer with proven ability to independently build production systems from requirements to
-                    deployment using Agile methodology. Architected semantic search solution serving 6,000+ users with
-                    132% accuracy improvement through intelligent system integration, microservices architecture, and
-                    Docker orchestration. Built production chatbot and fraud detection systems using Python and FastAPI.
-                    Specialize in LLM integration, bot development, and automation workflows with strong foundation in
-                    modular architecture, AI-assisted development practices, and full development lifecycle management.
-                    Currently advancing expertise through graduate research in Computer Vision and Edge AI, recognized
-                    with Best Paper Award at ASIP 2025. Multilingual (Khmer, English, Chinese) with deep understanding
-                    of AI applications in Southeast Asian contexts.</p>
+                <p>Published AI researcher (Best Paper Award, ASIP 2025) and production AI engineer with a track record of shipping systems that serve real users at scale. Architected semantic search for 6,000+ Cambodian teachers (132% accuracy improvement) and built a multi-tenant RAG chatbot SaaS with 78/78 tests passing — deployed end-to-end without a separate ops team. Specialize in LLM integration, RAG pipelines, and full-stack AI deployment. 5+ years of DevOps across Docker, Nginx, AWS, and multi-cloud environments. Pursuing a Master's in AI at CamTech University researching CNN-Transformer hybrid architectures for real-time anomaly detection. Multilingual: Khmer, English, Chinese.</p>
             </section>
 
             <section class="section">
@@ -384,13 +376,18 @@
                             principles for real-time anomaly detection</li>
                         <li>Processing and annotating sensor data, performing feature engineering, and optimizing hybrid
                             model (CNN-LSTM-Transformer)</li>
-                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference (Privacy Governance in AI-Powered
-                            Elderly Monitoring)</li>
+                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference — published in <a href="https://accesson.kr/ajip/v.14/3/330/58751" target="_blank" style="color: #a28847;">Asian Journal of Innovation and Policy</a> (Privacy Governance in AI-Powered Elderly Monitoring)</li>
                         <li><strong>Key Technologies:</strong> Python, PyTorch, FastAPI, Computer Vision, Anomaly
                             Detection, Edge Computing</li>
                     </ul>
                 </div>
             </section>
+
+                <div class="education-item" style="margin-top: 18px;">
+                    <h4>Royal University of Fine Arts (RUFA)</h4>
+                    <p class="job-title">Bachelor of Architecture (BArch)</p>
+                    <p class="date">Oct 2013 – Oct 2018</p>
+                </div>
 
             <section class="section">
                 <h3>AI PROJECTS</h3>
@@ -402,29 +399,12 @@
                             href="https://huggingface.co/spaces/monireach88/smart-chatbot-api" target="_blank"
                             style="color: #a28847;">HuggingFace Spaces</a></p>
                     <ul>
-                        <li>Architecting a configurable, natively multilingual chatbot microservice with two layers:
-                            Instructions layer (dynamic system prompt for tone and business rules) and RAG-based Domain
-                            Knowledge layer (ChromaDB vector store with CRUD API) — targeting SaaS deployment for SMEs
-                        </li>
-                        <li>Integrated Groq LLM (Qwen3-32b open-source) with stateful multi-turn conversation history,
-                            implemented <code>&lt;think&gt;</code> block parsing to cleanly separate model reasoning
-                            traces from user-facing responses, and designed SSE streaming pipeline for real-time
-                            typewriter UX</li>
-                        <li>Built production-grade infrastructure: FastAPI backend, Docker multi-environment
-                            orchestration (dev/staging/prod), PostgreSQL session management, Nginx reverse proxy, and
-                            comprehensive pytest test suite following TDD methodology</li>
-                        <li>Implemented multi-tenant SaaS architecture: API key generation utility, FastAPI middleware
-                            for tenant authentication, and tenant-scoped data isolation across all endpoints — enabling
-                            independent chatbot instances per business client</li>
-                        <li>Shipped <code>&lt;smart-chatbot&gt;</code> web component (Preact + Shadow DOM) with CSS
-                            custom properties theming; deployed to HuggingFace Spaces and embedded live in portfolio
-                            via cross-origin web component</li>
-                        <li>Designing configurable RAG pipeline (semantic chunking → embedding generation → ChromaDB
-                            top-k retrieval → prompt injection) enabling domain-specific responses per client without
-                            model fine-tuning or redeployment</li>
-                        <li>Retained hybrid NLP pipeline (TF-IDF + Naive Bayes intent classification, entity extraction)
-                            as deterministic routing layer before LLM invocation — combining classical ML precision with
-                            LLM generative capability for production reliability</li>
+                        <li>Built production-grade multi-tenant SaaS: API key auth, tenant-scoped DB isolation, and per-tenant system prompt (persona, tone, rules) — any business can configure and embed their own chatbot instance without writing AI code</li>
+                        <li>Implemented full RAG pipeline: document ingestion, OpenAI embeddings, ChromaDB vector store, semantic retrieval, and prompt injection — domain-specific responses per client without model fine-tuning</li>
+                        <li>Engineered hierarchical context memory: verbatim window for recent turns + async background summarization when token budget is exhausted — long conversations stay coherent at scale</li>
+                        <li>Integrated Groq LLM (Qwen3-32b) with SSE streaming pipeline for real-time typewriter UX; implemented <code>&lt;think&gt;</code> block parsing to cleanly separate reasoning traces from user-facing responses</li>
+                        <li>Shipped <code>&lt;smart-chatbot&gt;</code> web component (Preact + Shadow DOM) with CSS theming; deployed to HuggingFace Spaces via GitHub Actions CI/CD — <strong>78/78 tests passing</strong> (pytest TDD)</li>
+                        <li>Retained hybrid NLP routing layer (TF-IDF + Naive Bayes intent classification) before LLM invocation — combining classical ML precision with LLM generative capability for production reliability</li>
                     </ul>
                 </div>
                 <br>
