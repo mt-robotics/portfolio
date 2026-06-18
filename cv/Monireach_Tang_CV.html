@@ -274,7 +274,18 @@
 
             <section class="section">
                 <h3>ABOUT ME</h3>
-                <p>Published AI researcher (Best Paper Award, ASIP 2025) and production AI engineer with a track record of shipping systems that serve real users at scale. Architected semantic search for 6,000+ Cambodian teachers (132% accuracy improvement) and built a multi-tenant RAG chatbot SaaS with 78/78 tests passing — deployed end-to-end without a separate ops team. Specialize in LLM integration, RAG pipelines, and full-stack AI deployment. 5+ years of DevOps across Docker, Nginx, AWS, and multi-cloud environments. Pursuing a Master's in AI at CamTech University researching CNN-Transformer hybrid architectures for real-time anomaly detection. Multilingual: Khmer, English, Chinese.</p>
+                <p>Published AI researcher (Best Paper Award, ASIP 2025) and production AI engineer with a track
+                    record
+                    of shipping systems that serve real users at scale. Architected semantic search for 6,000+
+                    Cambodian
+                    teachers (132% accuracy improvement) and built a multi-tenant RAG chatbot SaaS with 264/264 tests
+                    passing — deployed end-to-end without a separate ops team — leveraging AI coding agents (Claude
+                    Code, Gemini CLI) to ship faster without sacrificing quality. Specialize in LLM integration, RAG
+                    pipelines, and full-stack AI deployment. 5+ years of DevOps across Docker, Nginx, AWS, and
+                    multi-cloud environments. Pursuing a Master's in AI at CamTech University researching
+                    CNN-Transformer hybrid architectures for real-time anomaly detection. Multilingual: Khmer,
+                    English,
+                    Chinese.</p>
             </section>
 
             <section class="section">
@@ -372,22 +383,28 @@
                     <ul>
                         <li><strong>Research Topic:</strong> "Contactless AI-Powered Abnormal Movement Detection for
                             Elderly Safety Assurance"</li>
-                        <li>Developing non-invasive AI system leveraging Computer Vision, Edge AI, and privacy-by-design
+                        <li>Developing non-invasive AI system leveraging Computer Vision, Edge AI, and
+                            privacy-by-design
                             principles for real-time anomaly detection</li>
-                        <li>Processing and annotating sensor data, performing feature engineering, and optimizing hybrid
+                        <li>Processing and annotating sensor data, performing feature engineering, and optimizing
+                            hybrid
                             model (CNN-LSTM-Transformer)</li>
-                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference — published in <a href="https://accesson.kr/ajip/v.14/3/330/58751" target="_blank" style="color: #a28847;">Asian Journal of Innovation and Policy</a> (Privacy Governance in AI-Powered Elderly Monitoring)</li>
+                        <li><strong>Best Paper Award</strong>, ASIP 2025 Conference — published in <a
+                                href="https://accesson.kr/ajip/v.14/3/330/58751" target="_blank"
+                                style="color: #a28847;">Asian Journal of Innovation and Policy</a> (Privacy
+                            Governance
+                            in AI-Powered Elderly Monitoring)</li>
                         <li><strong>Key Technologies:</strong> Python, PyTorch, FastAPI, Computer Vision, Anomaly
                             Detection, Edge Computing</li>
                     </ul>
                 </div>
             </section>
 
-                <div class="education-item" style="margin-top: 18px;">
-                    <h4>Royal University of Fine Arts (RUFA)</h4>
-                    <p class="job-title">Bachelor of Architecture (BArch)</p>
-                    <p class="date">Oct 2013 – Oct 2018</p>
-                </div>
+            <div class="education-item" style="margin-top: 18px;">
+                <h4>Royal University of Fine Arts (RUFA)</h4>
+                <p class="job-title">Bachelor of Architecture (BArch)</p>
+                <p class="date">Oct 2013 – Oct 2018</p>
+            </div>
 
             <section class="section">
                 <h3>AI PROJECTS</h3>
@@ -399,12 +416,34 @@
                             href="https://huggingface.co/spaces/monireach88/smart-chatbot-api" target="_blank"
                             style="color: #a28847;">HuggingFace Spaces</a></p>
                     <ul>
-                        <li>Built production-grade multi-tenant SaaS: API key auth, tenant-scoped DB isolation, and per-tenant system prompt (persona, tone, rules) — any business can configure and embed their own chatbot instance without writing AI code</li>
-                        <li>Implemented full RAG pipeline: document ingestion, OpenAI embeddings, ChromaDB vector store, semantic retrieval, and prompt injection — domain-specific responses per client without model fine-tuning</li>
-                        <li>Engineered hierarchical context memory: verbatim window for recent turns + async background summarization when token budget is exhausted — long conversations stay coherent at scale</li>
-                        <li>Integrated Groq LLM (Qwen3-32b) with SSE streaming pipeline for real-time typewriter UX; implemented <code>&lt;think&gt;</code> block parsing to cleanly separate reasoning traces from user-facing responses</li>
-                        <li>Shipped <code>&lt;smart-chatbot&gt;</code> web component (Preact + Shadow DOM) with CSS theming; deployed to HuggingFace Spaces via GitHub Actions CI/CD — <strong>78/78 tests passing</strong> (pytest TDD)</li>
-                        <li>Retained hybrid NLP routing layer (TF-IDF + Naive Bayes intent classification) before LLM invocation — combining classical ML precision with LLM generative capability for production reliability</li>
+                        <li>Leveraged AI coding agents (Claude Code, Gemini CLI) to accelerate development velocity
+                            while maintaining production standards — TDD, CI/CD, and full test suite coverage
+                            throughout
+                        </li>
+                        <li>Built production-grade multi-tenant SaaS: API key auth, tenant-scoped DB isolation, and
+                            per-tenant system prompt (persona, tone, rules) — any business can configure and embed
+                            their
+                            own chatbot instance without writing AI code</li>
+                        <li>Implemented full RAG pipeline: document ingestion, OpenAI embeddings, ChromaDB vector
+                            store,
+                            semantic retrieval, and prompt injection — domain-specific responses per client without
+                            model fine-tuning</li>
+                        <li>Engineered hierarchical context memory: verbatim window for recent turns + async
+                            background
+                            summarization when token budget is exhausted — long conversations stay coherent at scale
+                        </li>
+                        <li>Integrated Groq LLM (Qwen3-32b) with SSE streaming pipeline for real-time typewriter UX;
+                            implemented <code>&lt;think&gt;</code> block parsing to cleanly separate reasoning
+                            traces
+                            from user-facing responses</li>
+                        <li>Shipped <code>&lt;smart-chatbot&gt;</code> web component (Preact + Shadow DOM) with CSS
+                            theming; deployed to HuggingFace Spaces via GitHub Actions CI/CD — <strong>78/78 tests
+                                passing</strong> (pytest TDD)</li>
+                        <li>Retained hybrid NLP routing layer (TF-IDF + Naive Bayes intent classification) before
+                            LLM
+                            invocation — combining classical ML precision with LLM generative capability for
+                            production
+                            reliability</li>
                     </ul>
                 </div>
                 <br>
@@ -416,9 +455,11 @@
                             href="https://github.com/mt-robotics/fraud-detection-with-machine-learning" target="_blank"
                             style="color: #a28847;">GitHub</a></p>
                     <ul>
-                        <li>Built end-to-end fraud detection system handling full ML lifecycle from data preprocessing
+                        <li>Built end-to-end fraud detection system handling full ML lifecycle from data
+                            preprocessing
                             to production API deployment</li>
-                        <li>Achieved 96% precision and 91% F1 score through custom threshold optimization and business
+                        <li>Achieved 96% precision and 91% F1 score through custom threshold optimization and
+                            business
                             cost-aware metrics</li>
                         <li>Designed production-grade REST API with FastAPI featuring health checks, error handling,
                             SHAP-based model explanations, and real-time predictions</li>
@@ -431,30 +472,21 @@
             <section class="section">
                 <h3>WORK EXPERIENCE</h3>
                 <div class="experience-item">
-                    <h4>R4C (Tuktuk Charity)</h4>
-                    <p class="job-title">AI Engineer</p>
-                    <p class="date">Aug 2025 - Present | <a href="https://rermork.org/" target="_blank"
-                            style="color: #a28847;">Production</a> | <a
-                            href="https://rermork-staging.5m02gkw8xj-wl6nevv90652.p.temp-site.link/" target="_blank"
-                            style="color: #a28847;">Staging (with AI Chatbot)</a></p>
+                    <h4>Manulife Cambodia</h4>
+                    <p class="job-title">Generative AI Specialist</p>
+                    <p class="date">Jun 2026 - Present | Phnom Penh, Cambodia</p>
                     <ul>
-                        <li>Architected AI-powered educational platform serving 6,000+ Cambodian teachers, improving
-                            resource discovery accuracy from 25% to 58% (132% improvement) through hybrid search
-                            combining semantic embeddings and keyword matching with &lt;2-second response time</li>
-                        <li>Designed multi-cloud AI architecture integrating Google Cloud services: OpenAI for semantic
-                            search, Gemini for
-                            chat and translation, Google Speech-to-Text for voice input, and Pinecone for 1,400+
-                            educational
-                            resources</li>
-                        <li>Built microservices ecosystem using FastAPI and Docker: Khmer tokenization service
-                            (khmernltk) for NLP word segmentation, voice transcription service (FFmpeg + Google Cloud
-                            STT) for audio-to-text conversion, enabling voice-powered search interface</li>
-                        <li>Implemented bilingual embeddings system (Khmer-English) with intelligent caching and cost
-                            optimization (Gemini 2.5 Flash-Lite), reducing translation costs by 90% while maintaining
-                            search accuracy for both languages</li>
-                        <li>Developed RAG-based conversational chatbot with custom context filtering, dynamic URL
-                            mapping, and environment-aware responses, deployed on WordPress with AI Engine Pro
+                        <li>Design and implement GenAI solutions leveraging LLMs, multi-agent systems (LangGraph,
+                            Pydantic), and advanced orchestration frameworks for enterprise-scale deployment</li>
+                        <li>Build and fine-tune Generative AI models for text generation, summarization, and
+                            automation; implement Retrieval-Augmented Generation (RAG) for enterprise knowledge
                             integration</li>
+                        <li>Identify and prioritize GenAI use cases aligned with business objectives; collaborate with
+                            stakeholders to translate requirements into scalable AI solutions</li>
+                        <li>Ensure adherence to data privacy and ethical AI standards; implement robust testing
+                            strategies for prompt evaluation, schema validation, and workflow correctness</li>
+                        <li>Partner with Data Engineers, MLOps, and QA teams for production deployment and
+                            monitoring; provide mentorship on GenAI best practices</li>
                     </ul>
                 </div>
                 <br>
@@ -464,7 +496,8 @@
                     <p class="job-title">Chatbot Specialist</p>
                     <p class="date">Jun 2025 - Feb 2026</p>
                     <ul>
-                        <li>Design and deploy automated chat solutions using NLP tools, creating conversation scripts
+                        <li>Design and deploy automated chat solutions using NLP tools, creating conversation
+                            scripts
                             and FAQs in Khmer language</li>
                         <li>Monitor chatbot performance metrics, analyze user interactions, and optimize chat
                             functionality for customer satisfaction</li>
@@ -479,9 +512,11 @@
                     <p class="job-title">DevOps & Project Coordinator</p>
                     <p class="date">Dec 2023 - Jun 2024</p>
                     <ul>
-                        <li>Managed deployment infrastructure including MySQL, PHP, Node.js, and NGINX servers, handling
+                        <li>Managed deployment infrastructure including MySQL, PHP, Node.js, and NGINX servers,
+                            handling
                             domains, DNS, SSL certificates, and system monitoring via Tencent Cloud tools</li>
-                        <li>Coordinated project requirements through Zentao and implemented Docker with NGINX proxy for
+                        <li>Coordinated project requirements through Zentao and implemented Docker with NGINX proxy
+                            for
                             streamlined multi-project deployment and management</li>
                     </ul>
                 </div>
@@ -492,10 +527,40 @@
                     <p class="job-title">Flutter Dev & DevOps</p>
                     <p class="date">Dec 2020 - Dec 2023</p>
                     <ul>
-                        <li>Collaborated with Java backend developers for seamless integration and configured servers
+                        <li>Collaborated with Java backend developers for seamless integration and configured
+                            servers
                             across multiple cloud platforms</li>
                         <li>Built Android APKs and iOS PWAs, managing versioning and deployment via Git/GitLab to
                             deliver scheduled updates with improved workflows</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>VOLUNTEER EXPERIENCE</h3>
+                <div class="experience-item">
+                    <h4>R4C (Tuktuk Charity)</h4>
+                    <p class="job-title">Volunteer AI Engineer (Ad-hoc)</p>
+                    <p class="date">Aug 2025 - Present | <a href="https://rermork.org/" target="_blank"
+                            style="color: #a28847;">Production</a> | <a
+                            href="https://rermork-staging.5m02gkw8xj-wl6nevv90652.p.temp-site.link/" target="_blank"
+                            style="color: #a28847;">Staging (with AI Chatbot)</a></p>
+                    <ul>
+                        <li>Architected AI-powered educational platform serving 6,000+ Cambodian teachers, improving
+                            resource discovery accuracy from 25% to 58% (132% improvement) through hybrid search
+                            combining semantic embeddings and keyword matching with &lt;2-second response time</li>
+                        <li>Designed multi-cloud AI architecture integrating Google Cloud services: OpenAI for
+                            semantic search, Gemini for chat and translation, Google Speech-to-Text for voice
+                            input, and Pinecone for 1,400+ educational resources</li>
+                        <li>Built microservices ecosystem using FastAPI and Docker: Khmer tokenization service
+                            (khmernltk) for NLP word segmentation, voice transcription service (FFmpeg + Google
+                            Cloud STT) for audio-to-text conversion, enabling voice-powered search interface</li>
+                        <li>Implemented bilingual embeddings system (Khmer-English) with intelligent caching and
+                            cost optimization (Gemini 2.5 Flash-Lite), reducing translation costs by 90% while
+                            maintaining search accuracy for both languages</li>
+                        <li>Developed RAG-based conversational chatbot with custom context filtering, dynamic URL
+                            mapping, and environment-aware responses, deployed on WordPress with AI Engine Pro
+                            integration</li>
                     </ul>
                 </div>
             </section>
@@ -508,6 +573,8 @@
                         <div class="skill-badges">
                             <span class="skill-badge">LLM Integration</span>
                             <span class="skill-badge">RAG Architecture</span>
+                            <span class="skill-badge">LangGraph</span>
+                            <span class="skill-badge">Multi-Agent Systems</span>
                             <span class="skill-badge">NLP & Chatbot Development</span>
                             <span class="skill-badge">scikit-learn</span>
                             <span class="skill-badge">Computer Vision (CNNs)</span>
@@ -523,6 +590,7 @@
                         <div class="skill-badges">
                             <span class="skill-badge">Python</span>
                             <span class="skill-badge">FastAPI</span>
+                            <span class="skill-badge">Pydantic</span>
                             <span class="skill-badge">REST API Design</span>
                             <span class="skill-badge">PostgreSQL / SQLite</span>
                             <span class="skill-badge">SQLAlchemy 2.0</span>
@@ -536,6 +604,7 @@
                             <span class="skill-badge">GitHub Actions</span>
                             <span class="skill-badge">Nginx</span>
                             <span class="skill-badge">Linux</span>
+                            <span class="skill-badge">Azure AI Studio</span>
                             <span class="skill-badge">Google Cloud</span>
                             <span class="skill-badge">HuggingFace Spaces</span>
                         </div>
@@ -557,6 +626,8 @@
                             <span class="skill-badge">System Integration</span>
                             <span class="skill-badge">Git & Version Control</span>
                             <span class="skill-badge">Automation Workflows</span>
+                            <span class="skill-badge">Harness Engineering</span>
+                            <span class="skill-badge">Loop Engineering</span>
                             <span class="skill-badge">TDD</span>
                         </div>
                     </div>
