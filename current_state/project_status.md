@@ -7,6 +7,8 @@
 - Cloudflare DNS: 4 A records → GitHub Pages IPs, orange-cloud (proxied), SSL mode Full (Strict)
 - GitHub Pages serves TLS via Let's Encrypt; Cloudflare provides DDoS + CDN edge layer
 - Favicon: "MT" ligature in purple-blue gradient matching site accent
+- Mobile nav: hamburger menu working (added click handler to toggle `.open` class)
+- Cloudflare Email Obfuscation disabled to silence injected `email-decode.min.js` console noise
 - Run locally: `python3 -m http.server 8000` (no build step)
 
 ## Completed Milestones
@@ -21,4 +23,3 @@
 ## Post-V1 Backlog
 
 - 🔲 Add `PROJECT.md` for agent navigation
-- 🔲 Purge Cloudflare cache for old Google Sites favicon if browser still shows it
