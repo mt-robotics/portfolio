@@ -6,3 +6,8 @@ archive/
 .claude/
 /current_state
 /archive
+
+/.env
+
+# regenerable: scripts/build_local.sh
+/build_local
