@@ -22,8 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Inject chatbot widget URL
-        run: sed -i 's|__CHATBOT_WIDGET_URL__|${{ secrets.CHATBOT_WIDGET_URL }}|g' index.html
+      - name: Inject chatbot widget URL and key
+        run: |
+          sed -i 's|__CHATBOT_WIDGET_URL__|${{ secrets.CHATBOT_WIDGET_URL }}|g' index.html
+          sed -i 's|__CHATBOT_WIDGET_KEY__|${{ secrets.CHATBOT_WIDGET_KEY }}|g' index.html
+          if grep -q '__CHATBOT_WIDGET_' index.html; then echo 'Unfilled widget placeholder' >&2; exit 1; fi
 
       - uses: actions/configure-pages@v4
 
